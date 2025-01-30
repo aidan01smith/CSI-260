@@ -49,4 +49,25 @@ class card():
     
     def __eq__(self, other):    
         return self.value == other.value
+
+
+# create a game class
+# create the books list in a game class
+
+class Game:
+    def __init__(self, players, books, deck):
+        self.players = players
+        self.books = books
+        self.deck = deck
+        self.hands = {player: [] for player in players}
+        self.deal()
+
+    def deal(self):
+        pass
+
+    def print_hands(self):
+        pass
+
+    def winner(self):
+        pass
     
