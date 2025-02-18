@@ -7,11 +7,11 @@ class BasicApp:
         self.root.title("the application.")
         self.root.geometry("500x400")
 
-        # Label
+        
         self.label = tk.Label(root, text="Welcome to Tkinter OOP!", font=("Arial", 14))
         self.label.pack(pady=20)
 
-        # Buttons
+        # button functionality
         self.change_text_button = tk.Button(root, text="Change Text", command=self.change_text)
         self.change_text_button.pack(pady=5)
 
@@ -21,7 +21,7 @@ class BasicApp:
         self.quit_button = tk.Button(root, text="Quit", command=self.root.quit)
         self.quit_button.pack(pady=5)
 
-        # Adding the CounterApp class
+        # add the counter app
         self.counter_app = CounterApp(root)
 
     def change_text(self):
@@ -34,11 +34,11 @@ class CounterApp:
     def __init__(self, root):
         self.counter = 0
 
-        # Counter Label
+
         self.counter_label = tk.Label(root, text=f"Counter: {self.counter}", font=("Arial", 14))
         self.counter_label.pack(pady=10)
 
-        # Buttons to increment and decrement
+        # funny number go up and down
         self.increment_button = tk.Button(root, text="me when I increase the number", command=self.increment)
         self.increment_button.pack(pady=5)
 
@@ -56,7 +56,7 @@ class CounterApp:
     def update_label(self):
         self.counter_label.config(text=f"Counter: {self.counter}")
 
-# Run the GUI
+# running
 if __name__ == "__main__":
     root = tk.Tk()
     app = BasicApp(root)
